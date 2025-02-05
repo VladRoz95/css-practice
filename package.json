@@ -3,7 +3,7 @@
   "scripts": {
     "start": "parcel index.html --open",
     "predeploy": "parcel build index.html --public-url .",
-    "deploy": "develop -d dist"
+    "deploy": "gh-pages -d dist"
   },
   "devDependencies": {
     "@parcel/transformer-sass": "^2.10.2",
