@@ -1,2 +1,89 @@
+body {
+  margin: 0;
+  padding: 0;
+}
 
+.people {
+  box-sizing: border-box;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+  gap: 30px 40px;
+  padding: 35px 30px;
+  display: grid;
+}
+
+.person {
+  width: 200px;
+  transition: transform padding ease;
+  flex-direction: column;
+  align-items: center;
+  transition-duration: 1s;
+  display: flex;
+}
+
+.person__photo {
+  display: inline-block;
+  position: relative;
+}
+
+.person__img {
+  border-radius: 200px;
+  width: 200px;
+  transition: border-radius 1s;
+}
+
+.person__rank {
+  text-align: center;
+  color: #8b0000;
+  background-color: #fff;
+  border-radius: 200px;
+  align-content: center;
+  width: 32px;
+  height: 32px;
+  font-family: Arial;
+  font-size: 16px;
+  line-height: 18.4px;
+  display: block;
+  position: absolute;
+  top: 35%;
+  right: 10px;
+}
+
+.person__details .name {
+  text-align: center;
+  color: #2f4f4f;
+  font-family: Arial;
+  font-size: 20px;
+  line-height: 23px;
+}
+
+.person__extra {
+  text-align: center;
+  opacity: 0;
+  margin-top: 9px;
+  font-family: Arial;
+  font-size: 18px;
+  line-height: 20.7px;
+  transition: opacity;
+}
+
+.person:hover {
+  background-color: #eee;
+  padding: 10px 10px 16px;
+  transform: scale(1.2);
+}
+
+.person:hover:hover .person__img {
+  border-radius: 60px;
+}
+
+.person:hover:hover .person__extra {
+  opacity: 1;
+}
+
+@media (width >= 1000px) {
+  .people {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
 /*# sourceMappingURL=index.b1276d39.css.map */
